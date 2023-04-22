@@ -27,7 +27,7 @@
                         {{ $equipo->nombre }}
                     </a>
                     <span class="text-sm text-gray-500 ">Entrenador: {{ $equipo->entrenador }}</span>
-                    <span class="text-sm text-gray-500 ">Estadio: {{ $equipo->estaio }}</span>
+                    <span class="text-sm text-gray-500 ">Estadio: {{ $equipo->estadio }}</span>
                 </div>
             </div>
         </div>
