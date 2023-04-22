@@ -44,7 +44,7 @@ class EquipoController extends Controller
         session()->flash('status', 'Equipo Creado!');
         
         
-        return $request;
+        return to_route('equipos.index');
     }
 
     public function update(Request $request, Equipo $equipo)
