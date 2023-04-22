@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>@yield('title')</title>
-    <meta name ="description" content="@yield('meta-descritpion', 'defautl meta description)"/>
+    <meta name ="description" content="@yield('meta-descritpion', 'default meta description')"/>
 </head>
 <body>
     @yield('content')
