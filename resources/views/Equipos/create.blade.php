@@ -19,12 +19,12 @@
 					<!-- Col -->
 					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
 						<h3 class="pt-4 text-4xl text-center">Crea tu equipo!</h3>
-						<form action="{{route('equipos.store')}}" method="post" class="px-8 pt-10 pb-8 mb-4 bg-white rounded">
+						<form action="{{route('equipos.store')}}" method="POST" class="px-8 pt-10 pb-8 mb-4 bg-white rounded">
 							@csrf
 							<div class="mb-4 md:flex md:justify-center">
 								<div class="mb-6 md:mr-2 md:mb-2">
-									<label class="block mb-2 text-base font-sans text-black" for="Nombre del equipo">Nombre del equipo</label>
-									<input class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"	id="nombre"	type="text"	placeholder="Nombre del equipo"/>
+									<label class="block mb-2 text-base font-sans text-black" for="nombre">Nombre del equipo</label>
+									<input required autocomplete="off"	id="nombre"	name="nombre" type="text"	placeholder="Nombre del equipo" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
 									@error('nombre')
                                 	<br>
                                 	<small class="text-red">{{ $message }}</small>
@@ -33,8 +33,8 @@
 							</div>
 							<div class="mb-4 md:flex md:justify-center">
 								<div class="mb-6 md:mr-2 md:mb-2">
-									<label class="block mb-2 text-base font-sans text-black" for="Nombre del entrenador">Nombre del entrenador</label>
-									<input class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"	id="entrenador"	type="text"	placeholder="Nombre del entrenador"/>
+									<label class="block mb-2 text-base font-sans text-black" for="entrenador">Nombre del entrenador</label>
+									<input required autocomplete="off"	id="entrenador" name="entrenador"	type="text"	placeholder="Nombre del entrenador" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
 									@error('entrenador')
                                 	<br>
                                 	<small class="text-red">{{ $message }}</small>
@@ -43,8 +43,8 @@
 							</div>	
 							<div class="mb-6 md:flex md:justify-center">
 								<div class="mb-4 md:mr-2 md:mb-2">
-									<label class="block mb-2 text-base font-sans text-black" for="Nombre del equipo">Nombre del estadio</label>
-									<input class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"	id="estadio" type="text"	placeholder="Nombre del estadio"/>
+									<label class="block mb-2 text-base font-sans text-black" for="estadio">Nombre del estadio</label>
+									<input required autocomplete="off" id="estadio" type="text" name="estadio" placeholder="Nombre del estadio" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
 									@error('estadio')
                                 	<br>
                                 	<small class="text-red">{{ $message }}</small>
