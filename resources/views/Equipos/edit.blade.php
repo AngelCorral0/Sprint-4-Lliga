@@ -12,12 +12,12 @@
 				<div class="w-full xl:w-3/4 lg:w-11/12 flex">
 					<!-- Col -->
 					<div
-						class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-						style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80')"
+						class="w-full h-auto bg-gray-400 hidden lg:block lg:w-6/12 bg-cover rounded-l-lg"
+						style="background-image: url('https://images.unsplash.com/photo-1511886929837-354d827aae26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80')"
 					></div>
 					<!-- Col -->
 					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-						<h3 class="pt-4 text-4xl text-center">Crea tu equipo!</h3>
+						<h3 class="pt-4 text-4xl text-center">Edita tu equipo!</h3>
 						<form action="{{route('equipos.update', $equipo)}}" method="POST" class="px-8 pt-10 pb-8 mb-4 bg-white rounded">
 							@csrf @method('patch')
 							<div class="mb-4 md:flex md:justify-center">
