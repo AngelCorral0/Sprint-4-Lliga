@@ -18,40 +18,25 @@
 					<!-- Col -->
 					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
 						<h3 class="pt-4 text-4xl text-center">Tu equipo</h3>
-						<form action="{{route('equipos.index')}}" method="POST" class="px-8 pt-10 pb-8 mb-4 bg-white rounded">
-							@csrf
-							<div class="mb-4 md:flex md:justify-center">
+						<form action="{{route('equipos.index')}}" class="px-8 pt-10 pb-8 mb-4 bg-white rounded">
+							@csrf 
+							<div class="mb-4">
 								<div class="mb-6 md:mr-2 md:mb-2">
-									<label class="block mb-2 text-base font-sans text-black" for="nombre">Nombre del equipo</label>
-									<input required autocomplete="off"	id="nombre"	name="nombre" type="text"	placeholder="Nombre del equipo" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
-									@error('nombre')
-                                	<br>
-                                	<small class="text-red">{{ $message }}</small>
-                                	@enderror
+									<label class="block mb-2 text-base font-sans text-black" for="nombre">Nombre del equipo: {{$equipo->nombre}}</label>
 								</div>
 							</div>
-							<div class="mb-4 md:flex md:justify-center">
+							<div class="mb-4">
 								<div class="mb-6 md:mr-2 md:mb-2">
-									<label class="block mb-2 text-base font-sans text-black" for="entrenador">Nombre del entrenador</label>
-									<input required autocomplete="off"	id="entrenador" name="entrenador"	type="text"	placeholder="Nombre del entrenador" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
-									@error('entrenador')
-                                	<br>
-                                	<small class="text-red">{{ $message }}</small>
-                                	@enderror
+									<label class="block mb-2 text-base font-sans text-black" for="entrenador">Nombre del entrenador: {{$equipo->entrenador}}</label>
 								</div>
 							</div>	
-							<div class="mb-6 md:flex md:justify-center">
+							<div class="mb-6">
 								<div class="mb-4 md:mr-2 md:mb-2">
-									<label class="block mb-2 text-base font-sans text-black" for="estadio">Nombre del estadio</label>
-									<input required autocomplete="off" id="estadio" type="text" name="estadio" placeholder="Nombre del estadio" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
-									@error('estadio')
-                                	<br>
-                                	<small class="text-red">{{ $message }}</small>
-                                	@enderror
+									<label class="block mb-2 text-base font-sans text-black" for="estadio">Nombre del estadio: {{$equipo->estadio}}</label>
 								</div>
 							</div>
 							<div class="mb-8 text-center">
-								<button	type="submit" class="w-auto px-4 py-2 font-sans text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">Crear equipo</button>
+								<button	type="submit" class="w-auto px-4 py-2 font-sans text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">Regressar</button>
 							</div>
 						</form>
 					</div>
