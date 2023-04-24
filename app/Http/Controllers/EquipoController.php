@@ -51,7 +51,7 @@ class EquipoController extends Controller
     {
         $request->validate([
             'nombre' => ['required'],
-            'entrenador ' => ['required'],
+            'entrenador' => ['required'],
             'estadio' => ['required']
 
         ]);
