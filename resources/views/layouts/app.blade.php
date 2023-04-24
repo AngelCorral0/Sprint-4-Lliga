@@ -10,7 +10,7 @@
 </head>
 <body>
     @yield('content')
-    @yield('pepe')
+    
     
 </body>
 </html>
