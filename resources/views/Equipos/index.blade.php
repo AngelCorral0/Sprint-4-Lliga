@@ -6,32 +6,91 @@
 @section('content')
     <!-- component -->
 @section('content')
-<section class="min-h-screen bg-white ">
-    <div class="container px-6 py-10 mx-auto">
-        <div class="flex justify-center space-between">
-            <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">Lista de equipos:</h1>
-            
-        </div>
-        <a href="{{ route('equipos.create') }}">
-            <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
-                Crea un equipo!
-            </button>
-        </a>
-        @foreach ($equipos as $equipo)
-        <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-            <div class="lg:flex">
-                <a href="{{ route('equipos.show', $equipo) }}">
+<link
+	href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+	rel="stylesheet">
+<div class="flex items-center justify-center min-h-screen bg-gray-800">
+	<div class="col-span-12">
+		<div class="overflow-auto lg:overflow-visible ">
+			<table class="table text-gray-400 border-separate space-y-6 text-sm">
+				<thead class="bg-gray-700 text-gray-300">
+					<tr>
+						<th class="p-3 text-left">Equipo</th>
+						<th class="p-3 text-left">Entrenador</th>
+						<th class="p-3 text-left">Estadio</th>
+						<th class="p-3 ">Acciones</th>
+                        
+					</tr>
+				</thead>
+                <a href="{{ route('equipos.create') }}">
+                    <button type="button" class="bg-gray-700 text-gray-300 px-2 py-1 hover:text-white rounded ">
+                        Crea un equipo
+                    </button>
                 </a>
-                <div class="flex flex-col justify-between py-6 lg:mx-6">
-                    <a href="{{ route('equipos.show', $equipo) }}" class="text-4xl font-semibold text-gray-800 hover:underline  ">
-                        {{ $equipo->nombre }}
-                    </a>
-                    <span class="text-sm text-gray-500 ">Entrenador: {{ $equipo->entrenador }}</span>
-                    <span class="text-sm text-gray-500 ">Estadio: {{ $equipo->estadio }}</span>
-                </div>
-            </div>
-        </div>
-        @endforeach
-    </div>
-</section>
+                @foreach ($equipos as $equipo)
+				<tbody>
+                    <tr class="bg-gray-700">
+						<td class="p-3"> <a href="{{ route('equipos.show', $equipo) }}" class="hover:underline">{{ $equipo->nombre }}</a></td>
+						<td class="p-3">{{ $equipo->entrenador }}</td>
+						<td class="p-3 font-bold">{{ $equipo->estadio }}</td>
+						<td class="p-3  felx items-center">
+                        <div class="flex">
+                                <a href="{{ route('equipos.show', $equipo) }}" class="text-gray-400 hover:text-blue-400 mr-2">
+                                    <i class="material-icons-outlined text-base">visibility</i>
+                                </a>
+                                <a href="{{ route('equipos.edit', $equipo) }}" class="text-gray-400 hover:text-yellow-400 mx-2">
+                                    <i class="material-icons-outlined text-base">edit</i>
+                                </a>
+                                <form action="{{ route('equipos.delete', $equipo) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-gray-400 hover:text-red-400 mx-2">
+                                        <i class="material-icons-outlined text-base">delete</i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+				</tbody>
+                @endforeach
+			</table>
+		</div>
+	</div>
+</div>
+<style>
+	.table {
+		border-spacing: 0 15px;
+	}
+
+	i {
+		font-size: 1rem !important;
+	}
+
+	.table tr {
+		border-radius: 20px;
+	}
+
+	tr td:nth-child(n+4),
+	tr th:nth-child(n+4) {
+		border-radius: 0 .625rem .625rem 0;
+	}
+
+	tr td:nth-child(1),
+	tr th:nth-child(1) {
+		border-radius: .625rem 0 0 .625rem;
+	}
+</style>
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+<!-- component -->
+
