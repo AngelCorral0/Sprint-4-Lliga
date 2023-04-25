@@ -58,13 +58,10 @@
                         <tr>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-10 h-10 hidden sm:table-cell">
-                                        <img class="w-full h-full rounded-full"
-                                        alt="Team crest" src="{{ asset($partido->equipo_local) }}" />
-                                    </div>
+                                    
                                     <div class="ml-3">
                                         <p class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo_local->nombre }}
+                                            {{ $partido->equipo_local }}
                                         </p>
                                     </div>
                                 </div>
@@ -84,20 +81,17 @@
                                 <div class="flex items-center float-right">
                                     <div class="mr-3">
                                         <p class="text-gray-900 whitespace-no-wrap text-right">
-                                            {{ $partido->equipo_visitante->nombre }}
+                                            {{ $partido->equipo_visitante }}
                                         </p>
                                     </div>
-                                    <div class="flex-shrink-0 w-10 h-10 hidden sm:table-cell">
-                                        <img class="w-full h-full rounded-full"
-                                        alt="Team crest" src="{{ asset($partido->equipo_visitante) }}" />
-                                    </div>
+                                   
                                 </div>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->fecha_partido }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local->estadio }}</p>
+                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href="{{ route('partidos.show', $partido) }}">
