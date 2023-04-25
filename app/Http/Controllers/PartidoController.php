@@ -31,8 +31,8 @@ class PartidoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'equipo_local' => ['required'],
-            'equipo_visitante' => ['required'],
+            'equipo_local' => ['required', 'different: equipo_visitante'],
+            'equipo_visitante' => ['required', 'different: equipo_visitante'],
             'fecha_partido' => ['required']
 
         ]);
