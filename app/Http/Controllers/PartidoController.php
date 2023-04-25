@@ -18,14 +18,14 @@ class PartidoController extends Controller
         return view('partidos.create',  ['equipos' => Equipo::get()]);
     }
     
-    public function edit(Partido $juego)
+    public function edit(Partido $partido)
     {
-        return view('partdios.edit', ['juego' => $juego]);
+        return view('partdios.edit', ['partido' => $partido]);
     }
     
-    public function show(Partido $juego)
+    public function show(Partido $partido)
     {
-        return view('partidos.show', ['juego' => $juego]);
+        return view('partidos.show', ['partido' => $partido]);
     }
 
     public function store(Request $request)
