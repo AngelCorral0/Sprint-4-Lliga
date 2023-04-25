@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="ml-3">
                                         <a href="{{ route('equipos.show', $partido->equipo_local) }}" class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo->local->nombre }}
+                                            {{ $partido->equipo_local->nombre }}
                                         </a>
                                     </div>
                                 </div>
