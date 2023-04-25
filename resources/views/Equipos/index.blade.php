@@ -21,11 +21,18 @@
                         
 					</tr>
 				</thead>
-                <a href="{{ route('equipos.create') }}">
-                    <button type="button" class="bg-gray-700 text-gray-300 px-2 py-1 hover:text-white rounded ">
-                        Crea un equipo
-                    </button>
-                </a>
+				<div class="crear">
+					<a href="{{ route('equipos.create') }}">
+						<button type="button" class="bg-gray-700 text-gray-300 px-2 py-1 hover:text-white rounded ">
+							Crea un equipo
+						</button>
+					</a>
+					<a href="{{ route('partidos.create') }}">
+						<button type="button" class="bg-gray-700 text-gray-300 px-2 py-1 hover:text-white rounded">
+							Crea un partido
+						</button>
+					</a>
+				</div>
                 @foreach ($equipos as $equipo)
 				<tbody>
                     <tr class="bg-gray-700">

@@ -4,7 +4,7 @@
 @section('meta-description', 'Home meta description')
 
 @section('content')
-<body class="font-mono bg-gray-800">
+    <body class="font-mono bg-gray-800">
 		<!-- Container -->
 		<div class="container mx-auto">
 			<div class="flex justify-center px-12 my-24">
@@ -13,7 +13,7 @@
 					<!-- Col -->
 					<div
 						class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-						style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80')"
+						style="background-image: url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')"
 					></div>
 					<!-- Col -->
 					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
