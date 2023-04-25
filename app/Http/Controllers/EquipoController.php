@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Equipo;
+use App\Models\Partido;
 
 class EquipoController extends Controller
 {
@@ -24,7 +25,11 @@ class EquipoController extends Controller
     
     public function show(Equipo $equipo)
     {
-        return view('equipos.show', ['equipo' => $equipo]);
+        $partidos = $equipo->partidos_local;
+        foreach($equipo->partidos_visitante as $partido);
+        $partidos[]= $partido;
+
+        return view('equipos.show', ['equipo' => $equipo, 'partidos' =>$partidos]);
     }
 
     public function store(Request $request)
