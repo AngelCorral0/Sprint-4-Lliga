@@ -18,3 +18,22 @@ Route::get('/equipos/edit/{equipo}', [EquipoController::class, 'edit'])->name('e
 Route::patch('/equipos/{equipo}/update', [EquipoController::class, 'update'])->name('equipos.update');
 
 Route::delete('/equipos/{equipo}/delete', [EquipoController::class, 'delete'])->name('equipos.delete');
+
+//Partidos
+
+Route::get('/partidos', [PartidoController::class,'index'])->name('partidos.index');
+
+Route::get('/partidos/create', [PartidoController::class, 'create'])->name('partidos.create');
+Route::post('/partidos/create', [PartidoController::class, 'store'])->name('partidos.store');
+
+Route::get('/partidos/{partido}', [PartidoController::class, 'show'])->name('partidos.show');
+
+
+Route::get('/partidos/update/{partido}', [PartidoController::class, 'edit'])->name('partidos.edit');
+Route::post('/partidos/{partido}/update', [PartidoController::class, 'update'])->name('partidos.update');
+
+Route::delete('/partidos/{partido}/delete', [PartidoController::class, 'delete'])->name('partidos.delete');
+
+
+
+
