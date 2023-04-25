@@ -12,7 +12,7 @@
                 <div>
                     <h1 class="text-2xl font-semibold">Actualiza el resultado!</h1>
                 </div>
-                <form action="{{ route('partidos.update', $juego) }}" method="post">
+                <form action="{{ route('partidos.update', $partido) }}" method="post">
                     @csrf
                     <div class="divide-y divide-gray-200">
                         <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                 </form>
-                <a href="{{ route('partidos.show', $juego) }}" class="bg-purple-500 text-white rounded-md px-2 py-1">
+                <a href="{{ route('partidos.show', $partido) }}" class="bg-purple-500 text-white rounded-md px-2 py-1">
                     Cancelar
                 </a>
             </div>
