@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use app\Models\Equipo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Partido extends Model
 {
