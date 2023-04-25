@@ -40,7 +40,7 @@ class PartidoController extends Controller
         $partido = new Partido;
         $partido->equipo_local = $request->equipo_local;
         $partido->equipo_visitante = $request->equipo_visitante;
-        $partido->fecha = $request->fecha_partido;
+        $partido->fecha_partido = $request->fecha_partido;
         $partido->save();
         session()->flash('status','Partido Creado!');
         return to_route('partidos.index');
