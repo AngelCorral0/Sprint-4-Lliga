@@ -4,33 +4,33 @@
 
 @section('content')
 <section class="min-h-screen bg-white ">
-    <div class="container px-6 py-10 mx-auto">
-        <div class="mt-10 inline-block min-w-full shadow rounded-lg overflow-hidden">
+    <div class="container px-6 py-1 mx-auto">
+        <div class="mt-20 inline-block min-w-full shadow rounded-lg overflow-hidden">
             <table class="min-w-full leading-normal">
                 <thead>
                     <tr>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Local
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             |
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             -
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             |
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Visitante
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Fecha
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Estadio
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Vista
                         </th>
                     </tr>
