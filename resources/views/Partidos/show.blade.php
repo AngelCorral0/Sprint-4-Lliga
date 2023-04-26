@@ -4,33 +4,33 @@
 
 @section('content')
 <section class="min-h-screen bg-white ">
-    <div class="container px-6 py-10 mx-auto">
-        <div class="mt-10 inline-block min-w-full shadow rounded-lg overflow-hidden">
+    <div class="container px-6 py-1 mx-auto">
+        <div class="mt-20 inline-block min-w-full shadow rounded-lg overflow-hidden">
             <table class="min-w-full leading-normal">
                 <thead>
                     <tr>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Local
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             |
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             -
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             |
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Visitante
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Fecha
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Estadio
                         </th>
-                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                        <th class="px-3 py-3 border-b-2 border-gray-200 bg-gray-400 text-center text-xs font-semibold text-white-600 uppercase tracking-wider">
                             Vista
                         </th>
                     </tr>
@@ -40,12 +40,10 @@
                         <tr>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
                                 <div class="flex items-center">
-                                    <div class="flex-shrink-0 w-10 h-10 hidden sm:table-cell">
-                                        <img class="w-full h-full rounded-full" alt="Team crest" src="{{ asset($partido->equipo_local) }}" />
-                                    </div>
+                                    
                                     <div class="ml-3">
                                         <a href="{{ route('equipos.show', $partido->equipo_local) }}" class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo_local->nombre }}
+                                            {{ $partido->equipo_local}}
                                         </a>
                                     </div>
                                 </div>
@@ -65,19 +63,17 @@
                                 <div class="flex items-center float-right">
                                     <div class="mr-3">
                                         <a href="{{ route('equipos.show', $partido->equipo_visitante) }}" class="text-gray-900 whitespace-no-wrap text-right">
-                                            {{ $partido->equipo_visitante->nombre }}
+                                            {{ $partido->equipo_visitante }}
                                         </a>
                                     </div>
-                                    <div class="flex-shrink-0 w-10 h-10 hidden sm:table-cell">
-                                        <img class="w-full h-full rounded-full" alt="Team crest" src="{{ asset($partido->equipo_visitante) }}" />
-                                    </div>
+                                    
                                 </div>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->fecha_partido }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local->estadio }}</p>
+                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href="{{ route('partidos.show', $partido) }}">
