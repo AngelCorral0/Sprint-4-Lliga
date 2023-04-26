@@ -56,7 +56,7 @@
                                         @enderror
                                     </div>
                                     <div class="relative py-2">
-                                        <button type="submit" class="bg-blue-500 text-white rounded-md px-2 py-1">Crea un nuevo partido!</button>
+                                        <button type="submit" class="bg-blue-500 text-white rounded-md px-2 py-1">Crea un nuevo partido</button>
                                     </div>
                                 </div>
                             </div>
