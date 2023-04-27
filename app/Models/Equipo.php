@@ -12,10 +12,10 @@ class Equipo extends Model
 
     public function partidos_local()
     {
-        return $this->hasMany(Partido::class, 'equipo_local');
+        return $this->hasMany(Partido::class, 'equipo_local_id');
     }
     public function partidos_visitante()
     {
-        return $this->hasMany(Partido::class, 'equipo_visitante');
+        return $this->hasMany(Partido::class, 'equipo_visitante_id');
     }
 }
