@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->integer('goles_local')->default(0);
             $table->integer('goles_visitante')->default(0);
-            $table->foreignId('equipo_local')->references('id')->on('equipos')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('equipo_visitante')->references('id')->on('equipos')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('equipo_local_id')->references('id')->on('equipos')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('equipo_visitante_id')->references('id')->on('equipos')->onUpdate('cascade')->onDelete('cascade');
             $table->dateTime('fecha_partido');
             $table->timestamps();
         });
