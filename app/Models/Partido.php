@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use app\Models\Equipo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use app\Models\Equipo;
 
 class Partido extends Model
 {
