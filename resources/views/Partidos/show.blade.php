@@ -43,7 +43,7 @@
                                     
                                     <div class="ml-3">
                                         <a href="{{ route('equipos.show', $partido->equipo_local) }}" class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo_local}}
+                                            {{ $partido->equipo_local->nombre}}
                                         </a>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                 <div class="flex items-center float-right">
                                     <div class="mr-3">
                                         <a href="{{ route('equipos.show', $partido->equipo_visitante) }}" class="text-gray-900 whitespace-no-wrap text-right">
-                                            {{ $partido->equipo_visitante }}
+                                            {{ $partido->equipo_visitante->nombre }}
                                         </a>
                                     </div>
                                     
@@ -73,7 +73,7 @@
                                 <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->fecha_partido }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local }}</p>
+                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local->estadio}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href="{{ route('partidos.show', $partido) }}">
