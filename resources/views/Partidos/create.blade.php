@@ -57,6 +57,7 @@
                                     </div>
                                     <div class="relative py-2">
                                         <button type="submit" class="bg-blue-500 text-white rounded-md px-2 py-1">Crea un nuevo partido</button>
+                                        <a href="{{route('partidos.index')}}" class="bg-red-500 text-white rounded-md px-2 py-2">Cancelar</a>
                                     </div>
                                 </div>
                             </div>

@@ -2,6 +2,7 @@
 
 @section('title', 'Home')
 @section('meta-description', 'Home meta description')
+{{session('status')}}
 
   
 @section('content')
@@ -24,12 +25,17 @@
 				<div class="crear">
 					<a href="{{ route('equipos.create') }}">
 						<button type="button" class="bg-gray-700 text-gray-300 px-2 py-1 hover:text-white rounded ">
-							Crea un equipo
+							Crear equipo
 						</button>
 					</a>
 					<a href="{{ route('partidos.create') }}">
 						<button type="button" class="bg-gray-700 text-gray-300 px-2 py-1 hover:text-white rounded">
-							Crea un partido
+							Crear partido
+						</button>
+					</a>
+					<a href="{{ route('partidos.index') }}">
+						<button type="button" class="bg-gray-700 text-gray-300 px-2 py-1 hover:text-white rounded">
+							Ver partidos
 						</button>
 					</a>
 				</div>

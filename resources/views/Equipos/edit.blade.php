@@ -52,6 +52,8 @@
 							</div>
 							<div class="mb-8 text-center">
 								<button	type="submit" class="w-auto px-4 py-2 font-sans text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">Actualizar</button>
+								<a href="{{route('equipos.index')}}" class="w-auto px-4 py-2 font-sans text-white bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline">Regresar</a>
+
 							</div>
 						</form>
 					</div>

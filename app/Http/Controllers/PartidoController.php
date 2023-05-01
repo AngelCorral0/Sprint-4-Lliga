@@ -20,11 +20,13 @@ class PartidoController extends Controller
     
     public function edit(Partido $partido)
     {
-        return view('partdios.edit', ['partido' => $partido]);
+        return view('partidos.edit', ['partido' => $partido]);
     }
     
     public function show(Partido $partido)
     {
+        // dd($partido->equipo_local);
+
         return view('partidos.show', ['partido' => $partido]);
     }
 

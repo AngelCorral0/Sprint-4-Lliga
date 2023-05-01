@@ -8,6 +8,11 @@
         <div class="mb-12 flex space-between">
             <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">Tabla de partidos </h1>
         </div>
+        <a href="{{ route('equipos.index') }}">
+            <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+                Atrás
+            </button>
+        </a>
         <a href="{{ route('partidos.create') }}">
             <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
                 Crea un nuevo partido
@@ -61,7 +66,7 @@
                                     
                                     <div class="ml-3">
                                         <p class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo_local_id}}
+                                            {{ $partido->equipo_local->nombre}}
                                         </p>
                                     </div>
                                 </div>
@@ -81,7 +86,7 @@
                                 <div class="flex items-center float-right">
                                     <div class="mr-3">
                                         <p class="text-gray-900 whitespace-no-wrap text-right">
-                                            {{ $partido->equipo_visitante_id }}
+                                            {{ $partido->equipo_visitante->nombre }}
                                         </p>
                                     </div>
                                    
@@ -91,7 +96,7 @@
                                 <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->fecha_partido }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local_id }}</p>
+                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local->estadio }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href="{{ route('partidos.show', $partido) }}">

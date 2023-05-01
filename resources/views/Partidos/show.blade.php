@@ -43,7 +43,7 @@
                                     
                                     <div class="ml-3">
                                         <a href="{{ route('equipos.show', $partido->equipo_local_id) }}" class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo_local_id}}
+                                            {{ $partido->equipo_local->nombre}}
                                         </a>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                 <div class="flex items-center float-right">
                                     <div class="mr-3">
                                         <a href="{{ route('equipos.show', $partido->equipo_visitante_id) }}" class="text-gray-900 whitespace-no-wrap text-right">
-                                            {{ $partido->equipo_visitante_id }}
+                                            {{ $partido->equipo_visitante->nombre }}
                                         </a>
                                     </div>
                                     
@@ -73,7 +73,7 @@
                                 <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->fecha_partido }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local_id}}</p>
+                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local->estadio}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href="{{ route('partidos.show', $partido) }}">
@@ -89,12 +89,13 @@
             </table>
         </div>
         <div class="flex justify-center">
-            <a href="{{ route('partidos.edit', $partido )}}" type="button" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Actualizar resultado </a>
+            <a href="{{ route('partidos.edit', $partido )}}" type="button" class="text-white bg-orange-400 hover:bg-orange-500  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Actualizar resultado </a>
             <form method="post" action="{{ route('partidos.delete', $partido )}}">
                 @csrf @method('delete')
-                <button type="submit" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Eliminar </button>
+                <button type="submit" class="text-white bg-red-400 hover:bg-red-500  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Eliminar </button>
             </form>
-        </div>
+            <a href="{{ route('partidos.index') }}" class="text-white bg-blue-400 hover:bg-blue-500  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Atrás</a>
+            </div>
     </div>
 </section>
 @endsection
