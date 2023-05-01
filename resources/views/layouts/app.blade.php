@@ -10,7 +10,7 @@
 </head>
 <body>
     @yield('content')
-    
+    @include('Partials.session')
     
 </body>
 </html>

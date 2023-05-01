@@ -35,9 +35,9 @@ class EquipoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => ['required'],
-            'entrenador' => ['required'],
-            'estadio' => ['required']
+            'nombre' => ['required', 'max:20'],
+            'entrenador' => ['required', 'max:20'],
+            'estadio' => ['required', 'max:20']
 
         ]);
 
@@ -46,7 +46,7 @@ class EquipoController extends Controller
         $equipo->entrenador = $request->input('entrenador');
         $equipo->estadio = $request->input('estadio');
         $equipo->save();
-        
+        session()->flash('status', 'Equipo Creado!');
         
         
         return to_route('equipos.index');

@@ -13,7 +13,7 @@ class Partido extends Model
 
     public function equipo_local()
     {
-        return $this->belongsTo(Equipo::class, 'equipo_loca_id');
+        return $this->belongsTo(Equipo::class, 'equipo_local_id');
     
     }
     public function equipo_visitante()
