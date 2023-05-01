@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use app\Models\Equipo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Partido extends Model
 {
@@ -13,7 +13,7 @@ class Partido extends Model
 
     public function equipo_local()
     {
-        return $this->belongsTo(Equipo::class, 'equipo_local_id');
+        return $this->belongsTo(Equipo::class, 'equipo_loca_id');
     
     }
     public function equipo_visitante()
