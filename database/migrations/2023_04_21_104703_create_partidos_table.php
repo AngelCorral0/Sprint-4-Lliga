@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('partidos', function (Blueprint $table) {
             $table->id();
-            $table->integer('goles_local');
-            $table->integer('goles_visitante');
-            $table->foreignId('equipo_local');
-            $table->foreignId('equipo_visitante');
+            $table->integer('goles_local')->default(0);
+            $table->integer('goles_visitante')->default(0);
+            $table->foreignId('equipo_local_id')->references('id')->on('equipos')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('equipo_visitante_id')->references('id')->on('equipos')->onUpdate('cascade')->onDelete('cascade');
             $table->dateTime('fecha_partido');
             $table->timestamps();
         });

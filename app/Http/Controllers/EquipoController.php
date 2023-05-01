@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Equipo;
+use App\Models\Partido;
 
 class EquipoController extends Controller
 {
@@ -24,15 +25,17 @@ class EquipoController extends Controller
     
     public function show(Equipo $equipo)
     {
+        
+
         return view('equipos.show', ['equipo' => $equipo]);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => ['required'],
-            'entrenador ' => ['required'],
-            'estadio' => ['required']
+            'nombre' => ['required', 'max:20'],
+            'entrenador' => ['required', 'max:20'],
+            'estadio' => ['required', 'max:20']
 
         ]);
 
@@ -44,14 +47,14 @@ class EquipoController extends Controller
         session()->flash('status', 'Equipo Creado!');
         
         
-        return $request;
+        return to_route('equipos.index');
     }
 
     public function update(Request $request, Equipo $equipo)
     {
         $request->validate([
             'nombre' => ['required'],
-            'entrenador ' => ['required'],
+            'entrenador' => ['required'],
             'estadio' => ['required']
 
         ]);
