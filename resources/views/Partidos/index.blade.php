@@ -6,10 +6,10 @@
 <section class="min-h-screen bg-white ">
     <div class="container px-6 py-10 mx-auto">
         <div class="mb-12 flex space-between">
-            <h1 class="text-3xl font-semibold text-black capitalize lg:text-4xl">PARTIDOS </h1>
+            <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">Tabla de partidos </h1>
         </div>
         <a href="{{ route('partidos.create') }}">
-            <button type="button" class="text-white bg-blue-400 hover:bg-blue-600 focus:outline-none focus:ring-1 focus:ring-black font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+            <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
                 Crea un nuevo partido
             </button>
         </a>
@@ -18,35 +18,35 @@
                 <thead>
                     <tr>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             Local
                         </th>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             |
                         </th>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             -
                         </th>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             |
                         </th>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             Visitante
                         </th>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             Fecha
                         </th>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             Estadio
                         </th>
                         <th
-                            class="px-5 py-3 border-b-2 border-gray-800 bg-gray-600 text-center text-xs font-semibold text-white uppercase tracking-wider">
+                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
                             View
                         </th>
                     </tr>
@@ -61,7 +61,7 @@
                                     
                                     <div class="ml-3">
                                         <p class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo_local_id }}
+                                            {{ $partido->equipo_local_id}}
                                         </p>
                                     </div>
                                 </div>
