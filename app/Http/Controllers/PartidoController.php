@@ -32,7 +32,7 @@ class PartidoController extends Controller
     {
         $request->validate([
             'equipo_local' => ['required', 'different:equipo_visitante'],
-            'equipo_visitante' => ['required', 'different:equipo_visitante'],
+            'equipo_visitante' => ['required', 'different:equipo_local'],
             'fecha_partido' => ['required']
 
         ]);
