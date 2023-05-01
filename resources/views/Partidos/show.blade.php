@@ -42,8 +42,8 @@
                                 <div class="flex items-center">
                                     
                                     <div class="ml-3">
-                                        <a href="{{ route('equipos.show', $partido->equipo_local) }}" class="text-gray-900 whitespace-no-wrap">
-                                            {{ $partido->equipo_local->nombre}}
+                                        <a href="{{ route('equipos.show', $partido->equipo_local_id) }}" class="text-gray-900 whitespace-no-wrap">
+                                            {{ $partido->equipo_local_id}}
                                         </a>
                                     </div>
                                 </div>
@@ -62,8 +62,8 @@
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-2/5">
                                 <div class="flex items-center float-right">
                                     <div class="mr-3">
-                                        <a href="{{ route('equipos.show', $partido->equipo_visitante) }}" class="text-gray-900 whitespace-no-wrap text-right">
-                                            {{ $partido->equipo_visitante->nombre }}
+                                        <a href="{{ route('equipos.show', $partido->equipo_visitante_id) }}" class="text-gray-900 whitespace-no-wrap text-right">
+                                            {{ $partido->equipo_visitante_id }}
                                         </a>
                                     </div>
                                     
@@ -73,7 +73,7 @@
                                 <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->fecha_partido }}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local->estadio}}</p>
+                                <p class="text-gray-900 whitespace-no-wrap text-center">{{ $partido->equipo_local_id}}</p>
                             </td>
                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                 <a href="{{ route('partidos.show', $partido) }}">
