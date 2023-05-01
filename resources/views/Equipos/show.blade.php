@@ -36,7 +36,7 @@
 								</div>
 							</div>
 							<div class="mb-8 text-center">
-								<button	type="submit" class="w-auto px-4 py-2 font-sans text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">Regressar</button>
+								<button	type="submit" class="w-auto px-4 py-2 font-sans text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">Regresar</button>
 							</div>
 						</form>
 					</div>

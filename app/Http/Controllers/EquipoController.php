@@ -25,19 +25,17 @@ class EquipoController extends Controller
     
     public function show(Equipo $equipo)
     {
-        $partidos = $equipo->partidos_local;
-        foreach($equipo->partidos_visitante as $partido);
-        $partidos[]= $partido;
+        
 
-        return view('equipos.show', ['equipo' => $equipo, 'partidos' =>$partidos]);
+        return view('equipos.show', ['equipo' => $equipo]);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => ['required'],
-            'entrenador' => ['required'],
-            'estadio' => ['required']
+            'nombre' => ['required', 'max:20'],
+            'entrenador' => ['required', 'max:20'],
+            'estadio' => ['required', 'max:20']
 
         ]);
 
@@ -46,7 +44,7 @@ class EquipoController extends Controller
         $equipo->entrenador = $request->input('entrenador');
         $equipo->estadio = $request->input('estadio');
         $equipo->save();
-        
+        session()->flash('status', 'Equipo Creado!');
         
         
         return to_route('equipos.index');

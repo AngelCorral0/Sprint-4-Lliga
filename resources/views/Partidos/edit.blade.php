@@ -1,48 +1,57 @@
 @extends('layouts.app')
 @section('title', 'Update game')
 
+
+
 @section('content')
-
-<div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
-    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
-        </div>
-        <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
-            <div class="max-w-md mx-auto">
-                <div>
-                    <h1 class="text-2xl font-semibold">Actualiza el resultado!</h1>
-                </div>
-                <form action="{{ route('partidos.update', $partido) }}" method="post">
-                    @csrf
-                    <div class="divide-y divide-gray-200">
-                        <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                            <div class="relative">
-                                <input required autocomplete="off" id="goles_local" name="goles_local" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Equipo" />
-                                <label for="goles_local" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">{{ $partido->goles_local->nombre }} goles:</label>
-                                @error('goles_local')
-                                <br>
-                                <small class="text-red">{{ $message }}</small>
-                                @enderror
+<body class="font-mono bg-gray-800">
+		<!-- Container -->
+		<div class="container mx-auto">
+			<div class="flex justify-center px-12 my-24">
+				<!-- Row -->
+				<div class="w-full xl:w-3/4 lg:w-11/12 flex">
+					<!-- Col -->
+					<div
+						class="w-full h-auto bg-gray-400 hidden lg:block lg:w-6/12 bg-cover rounded-l-lg"
+						style="background-image: url('https://images.unsplash.com/photo-1632328266313-8a1d49998fe2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNjb3JlJTIwc29jY2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60')"
+					></div>
+					<!-- Col -->
+					<div class="w-full lg:w-7/12 bg-white p-7 rounded-lg lg:rounded-l-none">
+						<h3 class="pt-4 text-4xl text-center">Actualiza el marcador!</h3>
+                        <form action="{{ route('partidos.update', $partido) }}" method="post">
+							@csrf 
+							<div class="mb-8 md:flex md:justify-center">
+								<div class="mb-2 md:mr-2 md:mb-2">
+									<label class="block mb-2 text-base font-sans text-black" for="goles_local">Goles {{ $partido->equipo_local->nombre}}</label>
+									<input required autocomplete="off"id="goles_local" name="goles_local" type="integer" placeholder="goles de {{ $partido->equipo_local->nombre}}" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
+									@error('goles_local')
+                                	<br>
+                                	<small class="text-red">{{ $message }}</small>
+                                	@enderror
+								</div>
+							</div>
+							<div class="mb-8 md:flex md:justify-center">
+								<div class="mb-4 md:mr-2 md:mb-2">
+									<label class="block mb-2 text-base font-sans text-black" for="goles_visitante">Goles {{ $partido->equipo_visitante->nombre}}</label>
+									<input required autocomplete="off"	id="goles_visitante" name="goles_visitante"	type="integer" placeholder="goles de {{ $partido->equipo_visitante->nombre }}" class="w-full px-3 py-2 text-base leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"/>
+									@error('goles_visitante')
+                                	<br>
+                                	<small class="text-red">{{ $message }}</small>
+                                	@enderror
+								</div>
+							</div>	
+							<div class="mb-8 text-center">
+								<button	type="submit" class="w-auto px-4 py-2 font-sans text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline">Actualiza el marcador!</button>
+							</div>
+                            <div class="mb-8 text-center">
+                            <a href="{{ route('partidos.show', $partido) }}" class="w-auto px-4 py-2 font-sans text-white bg-red-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline">Cancelar</a>
                             </div>
-                            <div class="relative">
-                                <input required autocomplete="off" id="goles_visitante" name="goles_visitante" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="Entrenador" />
-                                <label for="goles_visitante" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">{{ $partido->goles_visitante->nombre }} goles:</label>
-                                @error('goles_visitante')
-                                <br>
-                                <small class="text-red">{{ $message }}</small>
-                                @enderror
-                            </div>
-                            <div class="relative">
-                                <button type="submit" class=" bg-blue-500 text-white rounded-md px-2 py-1">Actualizar</button>
-                            </div>
-                        </div>
-                </form>
-                <a href="{{ route('partidos.show', $partido) }}" class="bg-purple-500 text-white rounded-md px-2 py-1">
-                    Cancelar
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
+                            
+						</form>
+                        
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 @endsection
